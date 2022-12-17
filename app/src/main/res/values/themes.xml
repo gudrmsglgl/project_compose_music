@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="NightAdjusted.Theme.MusicApplication" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
+
+    <style name="PlatfromAdjusted.Theme.MusicApplication" parent="NightAdjusted.Theme.MusicApplication">
+        <item name="android:statusBarColor">@color/purple_700</item>
+    </style>
+
+    <style name="Theme.MusicApplication" parent="PlatfromAdjusted.Theme.MusicApplication"/>
+
+    <style name="NightAdjusted.Theme.Splash" parent="Theme.SplashScreen">
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
+
+    <style name="Theme.MusicApplication.Splash" parent="NightAdjusted.Theme.Splash">
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/splash_logo_foreground</item>
+        <item name="windowSplashScreenBackground">@color/color_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.MusicApplication</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+    </style>
+
+</resources>
