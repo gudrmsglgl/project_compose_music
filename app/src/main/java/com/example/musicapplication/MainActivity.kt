@@ -46,7 +46,16 @@ class MainActivity : ComponentActivity() {
         }
 
         splashScreen
-            .shouldExitStateSuccess(mainActivityUiState)
+            .setKeepOnScreenCondition {
+                when (mainActivityUiState) {
+                    Loading -> {
+                        true
+                    }
+                    Success -> {
+                        false
+                    }
+                }
+            }
 
         setContent {
             MusicApplicationTheme {
@@ -85,20 +94,6 @@ private fun SplashScreen.setExitSplashAnimation() {
             .start()
     }
 }
-
-private fun SplashScreen.shouldExitStateSuccess(mainActivityUiState: MainState) {
-    setKeepOnScreenCondition {
-        when (mainActivityUiState) {
-            Loading -> {
-                true
-            }
-            Success -> {
-                false
-            }
-        }
-    }
-}
-
 
 @Composable
 fun Greeting(name: String) {

@@ -12,7 +12,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    savedStateHandle: SavedStateHandle
 ): ViewModel() {
 
     val mainState: StateFlow<MainState> = flow<MainState> {
