@@ -16,3 +16,4 @@ rootProject.name = "MusicApplication"
 include ':app'
 include ':core:network'
 include ':core:data'
+include ':core:common'
